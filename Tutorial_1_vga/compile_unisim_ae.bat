@@ -19,7 +19,7 @@ REM Create executable for user design
 ghdl -e -g -Punisim --warn-unused --ieee=synopsys tb_vga
 
 REM Run the executable
-ghdl -r tb_vga --disp-tree=inst --stop-time=20000ns --vcd=tb_vga.vcd
+ghdl -r tb_vga --disp-tree=inst --stop-time=20000ns --vcd=tb_vga.vcd --wave=tb_vga.ghw
 
 REM Start gtk
-gtkwave tb_vga.vcd
+gtkwave tb_vga.ghw
